@@ -16,7 +16,7 @@
             <div class="col-md-3">
                 <h2 id='msg'></h2>
             </div>
-            <div class="col-md-7">
+            <div class="col-md-12">
                 <div id="delb"></div>
                 <div id="chessboard" tabindex="1" onkeydown="keyListener(event.keyCode)">
 
@@ -29,8 +29,8 @@
     </div>
     <script src="chess2.js"></script>
     <script>
-var cb = new ChessBoard();
-        cb.paint('#chessboard');
+        var chess = new Board(15, 13);
+        chess.paint('#chessboard');
     </script>
 </body>
 

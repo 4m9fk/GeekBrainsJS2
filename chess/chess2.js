@@ -7,13 +7,10 @@ var CHESSBOARD_CLASS = 'chessboard';
 
 
 
-function toLetter(i){
+function toLetter(i) {
     var A = 'A'.charCodeAt(0);
-    return String.fromCharCode(i+A-1);
+    return String.fromCharCode(i + A - 1);
 }
-
-
-
 
 function Board(w, h) {
     this.w = w;
@@ -41,7 +38,7 @@ function Board(w, h) {
                 }
             }
         }
-       return chessboard;
+        return chessboard;
     }
     this.paint = function (idd) {
         //console.log(board);
@@ -50,7 +47,7 @@ function Board(w, h) {
             cb += ' <div class=" ' + ROW_CLASS + '">';
             cb += '<div class="' + CELL_CLASS + '">' + i + '</div>';
             for (var j = 1; j <= this.w; j++) {
-                console.log(i,' ',j);
+                console.log(i, ' ', j);
                 var cellColor = (board[j][i].color != true) ? CELL_WHITE_CLASS : CELL_BLACK_CLASS;
                 var dclass = CELL_CLASS + cellColor;
                 cb += '<div class="' + dclass + '"' +
@@ -73,5 +70,10 @@ function Board(w, h) {
 
 
 }
-var chess = new Board(15, 13);
-chess.paint('#chessboard');
+
+function ChessBoard() {
+    Board.apply(this, [8, 8]);
+    
+}
+
+ 
