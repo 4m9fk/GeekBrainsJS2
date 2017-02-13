@@ -1,3 +1,10 @@
+var CELL_CLASS = 'cell col-md-2 ';
+var CELL_WHITE_CLASS = ' white ';
+var CELL_BLACK_CLASS = ' black ';
+var ROW_CLASS = 'row';
+var CHESSBOARD_CLASS = 'chessboard';
+
+
 function matrixArray(rows, columns) {
     var arr = new Array();
     for (var i = 1; i <= columns; i++) {
@@ -157,7 +164,22 @@ function paintChessBoard(ch) {
 }
 
 function showMeaasge(m) {
-    msg = document.getElementById('msg')
+    msg = document.getElementById('msg');
+    m = "Выбрана ячейка: " + m;
+    msg.innerHTML = m;
+
+}
+
+function keyListener(key) {
+    if (prev = document.getElementsByClassName('active')[0]) {
+
+        id = prev.getAttribute("id");
+        var i = id.charCodeAt(0) - 64;
+        var j = parseInt(id[1], 10);
+        //   alert(i, j);
+        switch (key) {
+        case 37:
+            chooseCell2((i - 1 > 0) ? i - 1 : 8, j);
             break;
         case 38:
             chooseCell2(i, (j + 1 <= 8) ? j + 1 : 1);
