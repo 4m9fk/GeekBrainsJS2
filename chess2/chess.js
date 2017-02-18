@@ -1,4 +1,4 @@
-var CELL_CLASS = 'cell col-md-1 ';
+var CELL_CLASS = 'cell ';
 var CELL_WHITE_CLASS = ' white ';
 var CELL_BLACK_CLASS = ' black ';
 var ROW_CLASS = 'row';
@@ -17,17 +17,17 @@ function Board(w, h) {
     }
     this.generateBoard = function (boardParent) {
         var p = document.querySelector(boardParent);
-        var board = document.createElement('div');
+        var board = document.createElement('table');
         board.className = CHESSBOARD_CLASS;
         for (var i = 1; i <= this.h; i++) {
-            var row = document.createElement('div');
-            row.className = 'row';
-            var cell = document.createElement('div');
+            var row = document.createElement('tr');
+            //row.className = 'row';
+            var cell = document.createElement('th');
             cell.className = CELL_CLASS;
             cell.innerHTML = this.h - i + 1;
             row.appendChild(cell);
             for (var j = 1; j <= this.w; j++) {
-                var chcell = document.createElement('div');
+                var chcell = document.createElement('td');
                 var color = (i + j) % 2 != 1 ? CELL_WHITE_CLASS : CELL_BLACK_CLASS;
                 chcell.className = CELL_CLASS + color;
                 chcell.id = toLetter(j) + (this.h - i + 1);
@@ -36,13 +36,13 @@ function Board(w, h) {
             board.appendChild(row);
 
         }
-        var row = document.createElement('div');
-        row.className = 'row';
-        var cell = document.createElement('div');
+        var row = document.createElement('tr');
+        //row.className = 'row';
+        var cell = document.createElement('th');
         cell.className = CELL_CLASS;
         row.appendChild(cell);
         for (var j = 1; j <= this.w; j++) {
-            var chcell = document.createElement('div');
+            var chcell = document.createElement('td');
             chcell.className = CELL_CLASS;
             chcell.innerHTML = toLetter(j);
             row.appendChild(chcell);
@@ -111,6 +111,6 @@ function Board(w, h) {
 
 
 
-var test = new Board(8, 8);
-test.generateBoard('.container');
+var test = new Board(14, 14);
+test.generateBoard('.container-fluid');
 test.putFigures('figures.json');
