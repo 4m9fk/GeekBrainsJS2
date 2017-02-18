@@ -1,88 +1,74 @@
 [
-    {
-        "figure": "pawn",
-        "color": "black",
-        "postion": "A2",
-        "deleted": 0
-
-    },
-    {
-        "figure": "pawn",
-        "color": "white",
-        "postion": "A1",
-        "deleted": 0
-
-    },
-    {
-        "figure": "rook",
-        "color": "white",
-        "postion": "B1",
-        "deleted": 0
-
-    },
-    {
-        "figure": "rook",
-        "color": "black",
-        "postion": "B2",
-        "deleted": 0
-
-    },
-    {
-        "figure": "knight",
-        "color": "white",
-        "postion": "C1",
-        "deleted": 0
-
-    },
-    {
-        "figure": "knight",
-        "color": "black",
-        "postion": "C2",
-        "deleted": 0
-
-    },
-    {
-        "figure": "bishop",
-        "color": "white",
-        "postion": "D1",
-        "deleted": 0
-
-    },
-    {
-        "figure": "bishop",
-        "color": "black",
-        "postion": "D2",
-        "deleted": 0
-
-    },
-        {
-        "figure": "queen",
-        "color": "white",
-        "postion": "F1",
-        "deleted": 0
-
-    },
-    {
-        "figure": "queen",
-        "color": "black",
-        "postion": "F2",
-        "deleted": 0
-
-    },
-        {
-        "figure": "king",
-        "color": "white",
-        "postion": "E1",
-        "deleted": 0
-
-    },
-    {
-        "figure": "king",
-        "color": "black",
-        "postion": "E2",
-        "deleted": 0
-
-    }
-
-
+  {
+    "figure": "pawn",
+    "color": "black",
+    "postion": "A2",
+    "deleted": 0
+  },
+  {
+    "figure": "pawn",
+    "color": "white",
+    "postion": "A1",
+    "deleted": 0
+  },
+  {
+    "figure": "rook",
+    "color": "white",
+    "postion": "B1",
+    "deleted": 0
+  },
+  {
+    "figure": "rook",
+    "color": "black",
+    "postion": "B2",
+    "deleted": 0
+  },
+  {
+    "figure": "knight",
+    "color": "white",
+    "postion": "C1",
+    "deleted": 0
+  },
+  {
+    "figure": "knight",
+    "color": "black",
+    "postion": "C2",
+    "deleted": 0
+  },
+  {
+    "figure": "bishop",
+    "color": "white",
+    "postion": "D1",
+    "deleted": 0
+  },
+  {
+    "figure": "bishop",
+    "color": "black",
+    "postion": "D2",
+    "deleted": 0
+  },
+  {
+    "figure": "queen",
+    "color": "white",
+    "postion": "F1",
+    "deleted": 0
+  },
+  {
+    "figure": "queen",
+    "color": "black",
+    "postion": "F2",
+    "deleted": 0
+  },
+  {
+    "figure": "king",
+    "color": "white",
+    "postion": "E1",
+    "deleted": 0
+  },
+  {
+    "figure": "king",
+    "color": "black",
+    "postion": "E2",
+    "deleted": 0
+  }
 ]

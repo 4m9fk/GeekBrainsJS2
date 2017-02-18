@@ -17,7 +17,8 @@ function Board(w, h) {
     this.generateBoard = function (boardParent) {
         var p = document.querySelector(boardParent);
         var board = document.createElement('table');
-        board.className = CHESSBOARD_CLASS;
+        board.id = CHESSBOARD_CLASS;
+        board.tabIndex = 1;
         for (var i = 1; i <= this.h; i++) {
             var row = document.createElement('tr');
             //row.className = 'row';
@@ -30,6 +31,7 @@ function Board(w, h) {
                 var color = (i + j) % 2 != 1 ? CELL_WHITE_CLASS : CELL_BLACK_CLASS;
                 chcell.className = CELL_CLASS + color;
                 chcell.id = toLetter(j) + (this.h - i + 1);
+
                 row.appendChild(chcell);
             }
             board.appendChild(row);
@@ -49,7 +51,10 @@ function Board(w, h) {
         }
         board.appendChild(row);
         p.appendChild(board);
-    }
+    };
+    this.getBoard = function () {
+        return document.getElementById('chessboard');
+    };
 
     function getFigure(f, color) {
         switch (f) {
@@ -75,6 +80,7 @@ function Board(w, h) {
 
     }
 
+
     function checkFigures(fgrs) {
 
         var restrictions = {// можно было бы вынести в константу
@@ -93,7 +99,7 @@ function Board(w, h) {
         };
         for (f in fgrs) {
             var fgr = fgrs[f].figure + fgrs[f].color;
-            if (--restrictions[fgr] == 0) {
+            if (--restrictions[fgr] < 0) {
                 console.error('слишком много ' + fgr + ' в json');
                 return 0;
             }
@@ -132,6 +138,5 @@ function Board(w, h) {
 }
 
 
-var test = new Board(48, 56);
-test.generateBoard('.container-fluid');
-test.putFigures('figures.json');
+
+
