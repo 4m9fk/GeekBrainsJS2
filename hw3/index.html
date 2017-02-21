@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <title>hw3</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="form-group">
+            <label class="form-control-label" for="phone">Телефон</label>
+            <input type="text" class="form-control form-control-success" id="phone" placeholder="+7(123)-456-78-90" onchange="checkPhone(this)">
+            <div class="form-control-feedback"></div>
+
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="inputWarning1">Email</label>
+            <input type="text" class="form-control form-control-warning" id="email" onchange="checkEmail(this)" placeholder="test@test.ru">
+            <div class="form-control-feedback"></div>
+
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="passport">Серия и номер паспорта</label>
+            <input type="text" class="form-control form-control-danger" id="passport" onchange="checkP(this)" placeholder="BM 1234567">
+            <div class="form-control-feedback"></div>
+
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="color">Цвет</label>
+            <input type="text" class="form-control form-control-danger" onchange="checkColor(this)" placeholder="#123456">
+            <div class="form-control-feedback"></div>
+
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="color">Ячейка</label>
+            <input type="text" class="form-control form-control-danger" onchange="checkCell(this)" placeholder="A1">
+            <div class="form-control-feedback"></div>
+
+        </div>
+                <div class="form-group">
+            <label class="form-control-label" for="color">Поиск времени</label>
+            <input type="text" class="form-control form-control-danger" onchange="searchTime(this)" placeholder="11-11">
+            <div class="form-control-feedback"></div>
+
+        </div>
+               <div class="form-group">
+            <label class="form-control-label" for="color">Поиск чисел</label>
+            <input type="text" class="form-control form-control-danger" onchange="searchNumbers(this)" placeholder="11">
+            <div class="form-control-feedback"></div>
+
+        </div>
+    </div>
+    <script src="hw3.js"></script>
+
+</body>
+
+</html>
