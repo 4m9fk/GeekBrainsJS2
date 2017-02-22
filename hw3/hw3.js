@@ -40,7 +40,6 @@ function checkP(elem) {
     }
 }
 function checkColor(elem) {
-    if (elem.value.math().length>0) {
         makeSucces(elem, 'Все получилось');
     } else {
         makeDanger(elem, 'Что-то не так! Код должен иметь вид #123456 или #ABC')
