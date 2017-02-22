@@ -40,6 +40,7 @@ function checkP(elem) {
     }
 }
 function checkColor(elem) {
+    if (/^#?([a-f0-9]{6}|[a-f0-9]{3})$/i.test(elem.value)) {
         makeSucces(elem, 'Все получилось');
     } else {
         makeDanger(elem, 'Что-то не так! Код должен иметь вид #123456 или #ABC')
