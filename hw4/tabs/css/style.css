@@ -1,0 +1,9 @@
+body {
+    background-image: url(../img/bg.png);
+    padding-top: 10rem;
+}
+
+.main {
+    background-color: white;
+    padding: 50px;
+}
