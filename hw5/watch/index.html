@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>watch</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+<div class="container">
+    <div class="row">
+    <div class="col-6 main">
+
+        <div id="clock"></div>
+
+    </div>
+    <div class="col-6 main ">
+        <div id="clock22"></div>
+    </div>
+    </div>
+</div>
+
+<script src="js/watch.js"></script>
+</body>
+<script>
+    var clock1 = new Clock({elem: "#clock"});
+    var clock2 = new Clock({elem: "#clock22"});
+    clock1.stop();
+</script>
+</html>
