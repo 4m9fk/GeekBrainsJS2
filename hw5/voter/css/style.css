@@ -1,0 +1,36 @@
+body {
+    background-image: url(../img/bg.png);
+    padding-top: 10rem;
+    font-size: 7rem;
+}
+
+.main {
+    background-color: white;
+    padding: 50px;
+}
+.down{
+    background-color: #bd4147;
+    display: inline-block;
+    padding: 0.25em 0.4em;
+    font-size: 75%;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+}
+.up{
+    background-color: #5cb85c;
+    display: inline-block;
+    padding: 0.25em 0.4em;
+    font-size: 75%;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+}
