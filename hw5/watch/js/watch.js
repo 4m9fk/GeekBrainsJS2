@@ -3,6 +3,7 @@
  */
 function Clock(elem) {
     var switcher = 1;
+    this.t  = 0;
     this.start = function () {
         switcher = 1;
      //   alert('start');
@@ -10,7 +11,9 @@ function Clock(elem) {
 
     };
     this.stop = function () {
-        switcher = 0;  //('stop');
+        switcher = 0;
+      
+
     };
 
     var clock = document.querySelector(elem.elem);
@@ -25,12 +28,12 @@ function Clock(elem) {
         var button = document.createElement('button');
         button.className = 'btn btn-success';
         button.innerHTML = 'Start';
-        button.addEventListener('onclick',this.start);
+        button.addEventListener('click',this.start);
         clock.appendChild(button);
         var button2 = document.createElement('button');
         button2.className = 'btn btn-danger float-right';
         button2.innerHTML = 'Stop';
-        button2.addEventListener('onclick',this.stop());
+        button2.addEventListener('click',this.stop);
         clock.appendChild(button2);
         clock.appendChild(canvas);
 
@@ -43,7 +46,7 @@ function Clock(elem) {
 
     function paint() {
         if (!switcher) {
-            return
+            return 0;
         } else {
             var date = new Date();
             var hours = (date.getHours()<10)?'0'+date.getHours():date.getHours();
@@ -112,7 +115,7 @@ function Clock(elem) {
 
             clock.restore();
 
-            setTimeout(function () {
+            this.t = setTimeout(function () {
                 paint()
             }, 1000);
         }
