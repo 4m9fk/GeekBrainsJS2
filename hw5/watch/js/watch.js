@@ -117,7 +117,7 @@ function Clock(elem) {
 
             this.t = setTimeout(function () {
                 paint()
-            }, 1000);
+            }, 100);
         }
     }
 
